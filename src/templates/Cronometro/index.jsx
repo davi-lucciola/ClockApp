@@ -1,11 +1,12 @@
 import { Component } from "react";
+import './style.css'
 
 export class Cronometro extends Component {
 
   render() {
     return (
       <section className="cronometer">
-        <p> Olá Mundo </p>
+        <h1> Cronometer </h1> 
       </section>
     )
   }
