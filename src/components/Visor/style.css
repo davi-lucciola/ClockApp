@@ -1,0 +1,12 @@
+.visor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: default;
+}
+
+.visor span {
+  font-size: 10rem;
+  font-family: var(--modern-font);
+}
+
