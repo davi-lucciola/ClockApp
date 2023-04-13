@@ -1,11 +1,29 @@
-export const Bubble = () => {
-    const bubbleRadius = Math.random() * 50;
-    const bubble = document.createElement('span');
+export const Bubble = (color) => {
+  const bubbleRadius = Math.random() * 50;
+  const bubble = document.createElement('span');
 
-    bubble.className = 'bubble'
-    bubble.style.width = 50 + bubbleRadius + 'px';
-    bubble.style.height = 50 + bubbleRadius + 'px';
-    bubble.style.left = Math.random() * (innerWidth - 20) + 'px';
-    return bubble;
+  bubble.className = 'bubble';
+  bubble.style.width = 50 + bubbleRadius + 'px';
+  bubble.style.height = 50 + bubbleRadius + 'px';
+  bubble.style.boxShadow = `inset 0 0 10px ${color}`
+  bubble.style.left = Math.random() * (innerWidth - 20) + 'px';
+  return bubble;
+};
+
+const createBubbles = (bubbles, color) => {
+  const bubble = Bubble(color);
+  bubbles.appendChild(bubble);
+  setTimeout(() => bubble.remove(), 8000);
+};
+
+export const destroyBubbles = async () => {
+  const bubbles = document.querySelectorAll('.bubble');
+  bubbles.map((bub) => {
+    bub.remove();
+  })
 }
 
+export const initBubbles = (color) => {
+  const bubbles = document.getElementById('bubbles');
+  return setInterval(() => createBubbles(bubbles, color), 100);
+};
