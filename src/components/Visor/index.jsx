@@ -1,13 +1,17 @@
-import './style.css'
+import "./style.css";
 
-export const Visor = () => {
-    return (
-        <div className="visor">
-            <span>0</span> 
-            <span>0</span>
-            <span>:</span>
-            <span>0</span>
-            <span>0</span>
-        </div>
-    )
-}
+export const Visor = ({ horario }) => {
+  return (
+    <div className="visor">
+      {horario.hour && (
+        <>
+          <span>{horario.hour}</span>
+          <span>:</span>
+        </>
+      )}
+      <span>{horario.minutes}</span>
+      <span>:</span>
+      <span>{horario.seconds}</span>
+    </div>
+  );
+};

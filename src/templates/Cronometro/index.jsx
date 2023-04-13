@@ -1,18 +1,27 @@
 import { Component } from "react";
 import { Visor } from "../../components/Visor";
-import { Button } from "../../components/Button";
+import { PlayPauseButton } from "../../components/PlayPauseButton";
 import './style.css'
 
+
 export class Cronometro extends Component {
+  state = {
+    isRunning: false,
+    currentTime: {
+      minutes: '00',
+      seconds: '00'
+    }
+  }
+
 
   render() {
+    const { isRunning, currentTime } = this.state; 
+
+
     return (
       <section className="cronometer">
-        <h1> Cronometer </h1> 
-        <Visor />
-        <Button 
-          className="play-button" 
-          content={(<img src="/play-icon.png"/>)}/>
+        <Visor horario={currentTime}/>
+        <PlayPauseButton isRunning={isRunning}/>
       </section>
     )
   }

@@ -1,12 +1,15 @@
+@import url('https://allfont.net/allfont.css?fonts=ds-digital');
+
 .visor {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   cursor: default;
 }
 
 .visor span {
   font-size: 10rem;
-  font-family: var(--modern-font);
+  font-family: 'DS-Digital', arial;
 }
 

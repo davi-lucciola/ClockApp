@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { App } from './templates/App'
 import { Bubble } from './components/Bubble'
 import './styles/global-styles.css'
+import './styles/bubbles.css'
 
 
 const Root = document.getElementById('root');

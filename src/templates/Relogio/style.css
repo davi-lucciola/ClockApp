@@ -1,0 +1,9 @@
+.watch {
+    position: relative;
+    min-width: 600px;
+    margin: auto;
+
+    border-radius: 12px;
+    border-top: 10px solid forestgreen;
+    border-bottom: 10px solid forestgreen;
+}
