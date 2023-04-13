@@ -16,26 +16,40 @@ main .menu button {
 
 .menu #cronometer-menu {
     border-bottom: 8px solid orange;
+    border-bottom-right-radius: 16px;
     transition: 0.3s ease-in-out;
 }
 
-.menu #cronometer-menu:hover {
+.menu #cronometer-menu:hover, .menu #cronometer-menu.current-menu:hover {
     color: rgb(39, 38, 38);
     background-color: orange;
 }
 
 .menu #watch-menu {
     border-bottom: 8px solid forestgreen;
+    border-bottom-left-radius: 16px;
     transition: 0.3s ease-in-out;
 }
 
-.menu #watch-menu:hover {
+.menu #watch-menu:hover, .menu #watch-menu.current-menu:hover {
     color: rgb(39, 38, 38);
     background-color: forestgreen;
 }
 
 .menu .current-menu {
     background-color: rgb(39, 38, 38);
+}
+
+.menu #cronometer-menu.current-menu {
+    border-bottom: 0;
+    color: orange;
+    border-top: 8px solid orange;
+}
+
+.menu #watch-menu.current-menu {
+    border-bottom: 0;
+    color: forestgreen;
+    border-top: 8px solid forestgreen;
 }
 
 @keyframes fillWatchMenu {
