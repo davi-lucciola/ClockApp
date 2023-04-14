@@ -11,7 +11,7 @@ main .menu button {
   font-family: var(--modern-font);
 
   color: #fff;
-  background-color: rgb(52, 52, 52);
+  background-color: rgba(52, 52, 52, 0.75);
 }
 
 .menu #cronometer-menu {
@@ -21,7 +21,7 @@ main .menu button {
 }
 
 .menu #cronometer-menu:hover, .menu #cronometer-menu.current-menu:hover {
-    color: rgb(39, 38, 38);
+    color: var(--background-primary);
     background-color: orange;
 }
 
@@ -32,12 +32,12 @@ main .menu button {
 }
 
 .menu #watch-menu:hover, .menu #watch-menu.current-menu:hover {
-    color: rgb(39, 38, 38);
+    color: var(--background-primary);
     background-color: forestgreen;
 }
 
 .menu .current-menu {
-    background-color: rgb(39, 38, 38);
+    background-color: transparent;
 }
 
 .menu #cronometer-menu.current-menu {
