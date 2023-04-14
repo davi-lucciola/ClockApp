@@ -10,14 +10,18 @@ export class App extends Component {
   state = {
     timers: [<Cronometro />, <Relogio />],
     currentMenu: 0,
+    bubbleColors: {
+      0: 'orange',
+      1: 'forestgreen'
+    },
     bubbles: initBubbles('orange')
   };
 
   switchMenu = (menuIndex) => {
-    const { bubbles } = this.state;
+    const { bubbles, bubbleColors } = this.state;
     clearInterval(bubbles);
+    destroyBubbles();
 
-    let color;
     const watch_menu = document.getElementById('watch-menu');
     const cronometer_menu = document.getElementById('cronometer-menu');
 
@@ -25,21 +29,19 @@ export class App extends Component {
       case 1:
         cronometer_menu.className = ''
         watch_menu.className = 'current-menu'
-        color = 'forestgreen'
         break;
 
       default:
         watch_menu.className = ''
         cronometer_menu.className = 'current-menu'
-        color = 'orange'
         break;
     }
-    destroyBubbles();
-    this.setState({ currentMenu: menuIndex, bubbles: initBubbles(color) });
+    
+    this.setState({ currentMenu: menuIndex, bubbles: initBubbles(bubbleColors[menuIndex])});
   };
 
   render() {
-    const { timers, currentMenu, bubbles } = this.state;
+    const { timers, currentMenu } = this.state;
 
     return (
       <main className="app">

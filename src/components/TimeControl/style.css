@@ -1,4 +1,12 @@
-.play-pause-button {
+.time-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.play-pause-button, .stop-button {
+    justify-self: center;
+
     border: none;
     width: 110px;
     height: 110px;
@@ -9,12 +17,18 @@
     transition: 0.3s ease-in-out;
 }
 
-.play-pause-button:hover {
+.stop-button {
+    width: 90px;
+    height: 90px;
+    margin-left: 40px;
+}
+
+.play-pause-button:hover, .stop-button:hover {
     background-color: rgb(31, 31, 31);
     border: 2px solid orange;
 }
 
-.play-icon, .pause-icon {
+.play-icon, .pause-icon, .stop-icon {
     font-size: 52px;
     width: 50px;
     height: 50px;
@@ -30,11 +44,18 @@
     transition: 0.3s ease-in;
 }
 
+.stop-icon {
+    font-size: 44px;
+    width: 42px;
+    height: 42px;
+}
+
 .play-icon {
     margin-left: 7%;
 }
 
 .play-pause-button:hover > .play-icon,
-.play-pause-button:hover > .pause-icon {
+.play-pause-button:hover > .pause-icon,
+.stop-button:hover > .stop-icon {
     color: orange;
 }
