@@ -1,9 +1,22 @@
 .watch {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
     min-width: 600px;
     margin: auto;
+    position: relative;
 
     border-radius: 12px;
-    border-top: 10px solid forestgreen;
-    border-bottom: 10px solid forestgreen;
+    font-family: 'DS-Digital', arial;
+}
+
+.data {    
+    font-size: 52px;
+    color: #fff;
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 24px rgb(58, 215, 58),
+      0 0 32px rgb(58, 215, 58);
 }

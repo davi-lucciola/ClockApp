@@ -6,7 +6,7 @@ export const Bubble = (color) => {
   bubble.style.width = 50 + bubbleRadius + 'px';
   bubble.style.height = 50 + bubbleRadius + 'px';
   bubble.style.boxShadow = `inset 0 0 10px ${color}`
-  bubble.style.left = Math.random() * 1366 + 'px';
+  bubble.style.left = Math.random() * innerWidth + 'px';
   return bubble;
 };
 
